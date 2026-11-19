@@ -5,7 +5,7 @@
 2026-11-19 的平面左右伸手实验记录了统一评估口径、实测结果和独立运行命令。见 [左右伸手实验](REACH_LR_RESULTS.md)。
 
 - [示范与策略对比视频（下载 MP4）](https://github.com/violet446/go2-piper-supermimic-v2/releases/download/reach-lr-20261119/go2_piper_demo_vs_policy.mp4) 左栏是示范，右栏是本轮仅用示范训练的策略，依次播放两个留出目标。
-- [检查点与视频下载](https://github.com/violet446/go2-piper-supermimic-v2/releases/tag/reach-lr-20261119)
+- [评估用策略权重与视频下载](https://github.com/violet446/go2-piper-supermimic-v2/releases/tag/reach-lr-20261119)
 
 策略每个控制周期同时输出 12 个腿关节和 6 个臂关节的指令。示范的腿关节目标设为固定站姿，臂关节目标随伸手动作变化，夹爪开合固定。
 
@@ -28,7 +28,7 @@
 - `vendor/go2_piper/` 是固定版本的组合模型。源 XML 保留，`reference.py` 生成供本项目使用的派生 XML。派生版本改用 mjlab 的执行器、默认接触选项和零碰撞 margin，以适配 MuJoCo Warp。
 - `vendor/supermimic-quadruped-0.2.0/` 包含四足 SuperMimic 和本项目添加的 Go2 + PiPER 机器人配置。
 - `data/train/` 和 `data/holdout/` 保存参考轨迹。保存在轨迹内的示范关节目标用于可选的初始化阶段。
-- `artifacts/` 下有 GPU 采样、评估数据和视频。本机运行还会生成原始日志、TensorBoard 记录和检查点。公开检查点由 GitHub Release 提供。对比视频左侧是 IK 与 PD 生成的参考，右侧是策略在物理仿真中的表现。
+- `artifacts/` 下有 GPU 采样、评估数据和视频。本机运行还会生成原始日志、TensorBoard 记录和完整续训检查点。GitHub Release 提供可直接回放的策略权重和配置。对比视频左侧是 IK 与 PD 生成的参考，右侧是策略在物理仿真中的表现。
 
 在 WSL Ubuntu 24.04 中运行。项目使用 Python 3.12、CUDA 和支持 EGL 的 MuJoCo 渲染环境。新克隆可用 `uv` 根据随附的锁文件创建环境。
 
