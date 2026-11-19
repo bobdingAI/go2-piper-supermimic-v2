@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Raw machine logs and TensorBoard events stay with the local runs.
+*.log
+MUJOCO_LOG.TXT
+artifacts/**/tb/
+
+# Checkpoints are distributed as GitHub Release assets.
+*.pt

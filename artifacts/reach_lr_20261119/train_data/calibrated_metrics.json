@@ -1,0 +1,108 @@
+[
+  {
+    "clip": "calibrated/reach_00",
+    "offset_m": [
+      0.045,
+      0.025,
+      0.0
+    ],
+    "reach_error_m": 0.0009861617380235116,
+    "max_tilt_deg": 2.4237189487423443,
+    "full_support_fraction": 1.0,
+    "joints_within_limits": true,
+    "calibration_residual_m": [
+      0.026225101905220448,
+      0.007206742181830897,
+      0.0026393662702262634,
+      0.0009835537619298986
+    ]
+  },
+  {
+    "clip": "calibrated/reach_01",
+    "offset_m": [
+      0.05,
+      0.04,
+      0
+    ],
+    "reach_error_m": 0.0009529197311665149,
+    "max_tilt_deg": 2.42172211034574,
+    "full_support_fraction": 1.0,
+    "joints_within_limits": true,
+    "calibration_residual_m": [
+      0.027440144723793677,
+      0.006523469091796988,
+      0.002692078871711835,
+      0.0009495990857413778
+    ]
+  },
+  {
+    "clip": "calibrated/reach_02",
+    "offset_m": [
+      0.065,
+      0.05,
+      0.0
+    ],
+    "reach_error_m": 0.0012265695991591043,
+    "max_tilt_deg": 2.4274911487021913,
+    "full_support_fraction": 1.0,
+    "joints_within_limits": true,
+    "calibration_residual_m": [
+      0.032034841174768965,
+      0.002195261125628383,
+      0.0011379349961791521
+    ]
+  },
+  {
+    "clip": "calibrated/reach_03",
+    "offset_m": [
+      0.045,
+      -0.025,
+      0.0
+    ],
+    "reach_error_m": 0.001004407950470686,
+    "max_tilt_deg": 2.42358300581746,
+    "full_support_fraction": 1.0,
+    "joints_within_limits": true,
+    "calibration_residual_m": [
+      0.026206835434678766,
+      0.007262857741020188,
+      0.002678384453228217,
+      0.0010018695159028537
+    ]
+  },
+  {
+    "clip": "calibrated/reach_04",
+    "offset_m": [
+      0.05,
+      -0.04,
+      0
+    ],
+    "reach_error_m": 0.0009717922533613455,
+    "max_tilt_deg": 2.421215437585546,
+    "full_support_fraction": 1.0,
+    "joints_within_limits": true,
+    "calibration_residual_m": [
+      0.027393237848442192,
+      0.006605615175591475,
+      0.002727152723359567,
+      0.0009687075848686472
+    ]
+  },
+  {
+    "clip": "calibrated/reach_05",
+    "offset_m": [
+      0.065,
+      -0.05,
+      0.0
+    ],
+    "reach_error_m": 0.0012274978416115002,
+    "max_tilt_deg": 2.4268536331929567,
+    "full_support_fraction": 1.0,
+    "joints_within_limits": true,
+    "calibration_residual_m": [
+      0.0319707052264404,
+      0.0022063497483271353,
+      0.0011441815186358044
+    ]
+  }
+]

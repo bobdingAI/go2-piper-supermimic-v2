@@ -1,0 +1,98 @@
+[
+  {
+    "clip": "train/reach_00",
+    "offset_m": [
+      0.07,
+      0,
+      0
+    ],
+    "reach_error_m": 0.03260230616731688,
+    "max_tilt_deg": 2.4087464232272806,
+    "full_support_fraction": 1.0,
+    "joints_within_limits": true
+  },
+  {
+    "clip": "train/reach_01",
+    "offset_m": [
+      0.05,
+      0.04,
+      0
+    ],
+    "reach_error_m": 0.02744205527142744,
+    "max_tilt_deg": 2.4168833977415316,
+    "full_support_fraction": 1.0,
+    "joints_within_limits": true
+  },
+  {
+    "clip": "train/reach_02",
+    "offset_m": [
+      0.05,
+      -0.04,
+      0
+    ],
+    "reach_error_m": 0.027395140707802856,
+    "max_tilt_deg": 2.4167477568861484,
+    "full_support_fraction": 1.0,
+    "joints_within_limits": true
+  },
+  {
+    "clip": "train/reach_03",
+    "offset_m": [
+      0.055,
+      0,
+      0.04
+    ],
+    "reach_error_m": 0.029310239715042322,
+    "max_tilt_deg": 2.4238975562408887,
+    "full_support_fraction": 1.0,
+    "joints_within_limits": true
+  },
+  {
+    "clip": "train/reach_04",
+    "offset_m": [
+      0.055,
+      0,
+      -0.035
+    ],
+    "reach_error_m": 0.027697061959754313,
+    "max_tilt_deg": 2.426756176108389,
+    "full_support_fraction": 1.0,
+    "joints_within_limits": true
+  },
+  {
+    "clip": "train/reach_05",
+    "offset_m": [
+      0.035,
+      0.025,
+      0.025
+    ],
+    "reach_error_m": 0.02550708121092088,
+    "max_tilt_deg": 2.451974926520371,
+    "full_support_fraction": 1.0,
+    "joints_within_limits": true
+  },
+  {
+    "clip": "holdout/reach_00",
+    "offset_m": [
+      0.06,
+      0.025,
+      0.02
+    ],
+    "reach_error_m": 0.029007398652701785,
+    "max_tilt_deg": 2.4009674846342777,
+    "full_support_fraction": 1.0,
+    "joints_within_limits": true
+  },
+  {
+    "clip": "holdout/reach_01",
+    "offset_m": [
+      0.045,
+      -0.03,
+      -0.02
+    ],
+    "reach_error_m": 0.026467608040481466,
+    "max_tilt_deg": 2.442807179925853,
+    "full_support_fraction": 1.0,
+    "joints_within_limits": true
+  }
+]

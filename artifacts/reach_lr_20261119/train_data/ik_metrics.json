@@ -1,0 +1,74 @@
+[
+  {
+    "clip": "ik/reach_00",
+    "offset_m": [
+      0.045,
+      0.025,
+      0.0
+    ],
+    "reach_error_m": 0.026227071212683147,
+    "max_tilt_deg": 2.435500533123393,
+    "full_support_fraction": 1.0,
+    "joints_within_limits": true
+  },
+  {
+    "clip": "ik/reach_01",
+    "offset_m": [
+      0.05,
+      0.04,
+      0
+    ],
+    "reach_error_m": 0.02744205527142744,
+    "max_tilt_deg": 2.4168833977415316,
+    "full_support_fraction": 1.0,
+    "joints_within_limits": true
+  },
+  {
+    "clip": "ik/reach_02",
+    "offset_m": [
+      0.065,
+      0.05,
+      0.0
+    ],
+    "reach_error_m": 0.03203971380705011,
+    "max_tilt_deg": 2.412079976141971,
+    "full_support_fraction": 1.0,
+    "joints_within_limits": true
+  },
+  {
+    "clip": "ik/reach_03",
+    "offset_m": [
+      0.045,
+      -0.025,
+      0.0
+    ],
+    "reach_error_m": 0.026208798636551435,
+    "max_tilt_deg": 2.4355454559144967,
+    "full_support_fraction": 1.0,
+    "joints_within_limits": true
+  },
+  {
+    "clip": "ik/reach_04",
+    "offset_m": [
+      0.05,
+      -0.04,
+      0
+    ],
+    "reach_error_m": 0.027395140707802856,
+    "max_tilt_deg": 2.4167477568861484,
+    "full_support_fraction": 1.0,
+    "joints_within_limits": true
+  },
+  {
+    "clip": "ik/reach_05",
+    "offset_m": [
+      0.065,
+      -0.05,
+      0.0
+    ],
+    "reach_error_m": 0.031975533208042035,
+    "max_tilt_deg": 2.4113581805145707,
+    "full_support_fraction": 1.0,
+    "joints_within_limits": true
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "clip": "holdout/reach_00.npz",
+  "checkpoint": "artifacts/training/reach_warm/ckpt_latest.pt",
+  "steps_completed": 150,
+  "steps_expected": 150,
+  "mean_tip_tracking_error_m": 0.030226929113268852,
+  "reach_goal_error_m": 0.055872235298789964,
+  "peak_tip_excursion_m": 0.015726372599601746,
+  "reference_peak_tip_excursion_m": 0.07054084539413452,
+  "leg_joint_rmse_rad": 0.002379597397521138,
+  "arm_joint_rmse_rad": 0.05009857565164566,
+  "max_tilt_deg": 2.4238200187683105
+}

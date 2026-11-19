@@ -1,0 +1,26 @@
+[
+  {
+    "clip": "ik/reach_00",
+    "offset_m": [
+      0.055,
+      0.032,
+      0.0
+    ],
+    "reach_error_m": 0.028559163809951032,
+    "max_tilt_deg": 2.410444568243928,
+    "full_support_fraction": 1.0,
+    "joints_within_limits": true
+  },
+  {
+    "clip": "ik/reach_01",
+    "offset_m": [
+      0.062,
+      -0.034,
+      0.0
+    ],
+    "reach_error_m": 0.030674526900759592,
+    "max_tilt_deg": 2.407425096115165,
+    "full_support_fraction": 1.0,
+    "joints_within_limits": true
+  }
+]
