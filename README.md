@@ -1,8 +1,10 @@
 # Go2 + PiPER 站立伸手
 
-本项目在 WSL2 Ubuntu 24.04 的 Python 3.12 环境运行，使用 RTX 4060 Laptop GPU、mjlab 1.6.0 和 MuJoCo Warp 3.16.0。实施顺序见 [计划](PLAN.md)。这版验证了带臂仿真、动作数据生成、SuperMimic 更新和留出轨迹评估。
+原始实验在 WSL2 Ubuntu 24.04 的 Python 3.12 环境运行，使用 RTX 4060 Laptop GPU、mjlab 1.6.0 和 MuJoCo Warp 3.16.0。实验验证了带臂仿真、动作数据生成、SuperMimic 更新和留出轨迹评估。实施顺序见 [计划](PLAN.md)。
 
 2026-11-19 的平面左右伸手实验记录了统一评估口径、实测结果和独立运行命令。见 [左右伸手实验](REACH_LR_RESULTS.md)。
+
+Ubuntu 22.04 与 RTX 5090 上也完成了发布权重回放、历史短训和左右伸手对照。仅用校准示范训练的策略，在左右两个留出目标上沿参考方向分别伸出了参考位移的 79.58% 和 81.99%，停留段手爪到参考轨迹的平均距离为 1.32 和 1.48 cm。两个目标均通过验收。见 [独立复现记录](REACH_LR_RESULTS.md#独立复现)。
 
 - [示范与策略对比视频（下载 MP4）](https://github.com/violet446/go2-piper-supermimic-v2/releases/download/reach-lr-20261119/go2_piper_demo_vs_policy.mp4) 左栏是示范，右栏是本轮仅用示范训练的策略，依次播放两个留出目标。
 - [评估用策略权重与视频下载](https://github.com/violet446/go2-piper-supermimic-v2/releases/tag/reach-lr-20261119)
@@ -30,7 +32,7 @@
 - `data/train/` 和 `data/holdout/` 保存参考轨迹。保存在轨迹内的示范关节目标用于可选的初始化阶段。
 - `artifacts/` 下有 GPU 采样、评估数据和视频。本机运行还会生成原始日志、TensorBoard 记录和完整续训检查点。GitHub Release 提供可直接回放的策略权重和配置。对比视频左侧是 IK 与 PD 生成的参考，右侧是策略在物理仿真中的表现。
 
-在 WSL Ubuntu 24.04 中运行。项目使用 Python 3.12、CUDA 和支持 EGL 的 MuJoCo 渲染环境。新克隆可用 `uv` 根据随附的锁文件创建环境。
+项目使用 Python 3.12、CUDA 和支持 EGL 的 MuJoCo 渲染环境，已在 WSL2 Ubuntu 24.04 和原生 Ubuntu 22.04 上运行。新克隆可用 `uv` 根据随附的锁文件创建环境。
 
 ```bash
 runtime="$HOME/.cache/go2-piper-supermimic-v2"

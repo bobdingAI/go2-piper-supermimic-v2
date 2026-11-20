@@ -1,0 +1,80 @@
+{
+  "ik_pd_cpu": {
+    "steps_completed": 150,
+    "steps_expected": 150,
+    "terminated": false,
+    "direction_completion": 1.0,
+    "dwell_displacement_xyz_m": [
+      0.06149386614561081,
+      -0.03406863659620285,
+      0.00010037422180175781
+    ],
+    "reference_dwell_displacement_xyz_m": [
+      0.06149386614561081,
+      -0.03406863659620285,
+      0.00010037422180175781
+    ],
+    "dwell_tip_tracking_error_m": 0.0,
+    "reach_goal_error_m": 0.0006627934905617816,
+    "mean_tip_tracking_error_m": 0.0,
+    "peak_tip_excursion_m": 0.07296270877122879,
+    "reference_peak_tip_excursion_m": 0.07296270877122879,
+    "return_residual_m": 0.00948723778128624,
+    "max_tilt_deg": 2.4201834201812744,
+    "full_support_fraction": 1.0
+  },
+  "ik_pd_warp": {
+    "steps_completed": 150,
+    "steps_expected": 150,
+    "terminated": false,
+    "direction_completion": 1.0000425577163696,
+    "dwell_displacement_xyz_m": [
+      0.06148608401417732,
+      -0.03408884257078171,
+      0.0001076368207577616
+    ],
+    "reference_dwell_displacement_xyz_m": [
+      0.06149386614561081,
+      -0.03406863659620285,
+      0.00010037422180175781
+    ],
+    "dwell_tip_tracking_error_m": 2.607940223242622e-05,
+    "reach_goal_error_m": 0.0006676994010886961,
+    "mean_tip_tracking_error_m": 4.617551894625649e-05,
+    "peak_tip_excursion_m": 0.07296814024448395,
+    "reference_peak_tip_excursion_m": 0.07296270877122879,
+    "return_residual_m": 0.009619527496397495,
+    "max_tilt_deg": 2.424546718597412,
+    "full_support_fraction": 1.0,
+    "checkpoint": null,
+    "frame_zero_joint_max_error_rad": 0.0,
+    "frame_zero_tip_error_m": 6.039972788585146e-08
+  },
+  "calibrated_initial": {
+    "steps_completed": 150,
+    "steps_expected": 150,
+    "terminated": false,
+    "direction_completion": 0.8256173729896545,
+    "dwell_displacement_xyz_m": [
+      0.04693877324461937,
+      -0.03504643216729164,
+      -0.0008275325526483357
+    ],
+    "reference_dwell_displacement_xyz_m": [
+      0.06149386614561081,
+      -0.03406863659620285,
+      0.00010037422180175781
+    ],
+    "dwell_tip_tracking_error_m": 0.014617503620684147,
+    "reach_goal_error_m": 0.014117956491149553,
+    "mean_tip_tracking_error_m": 0.011890816502273083,
+    "peak_tip_excursion_m": 0.05970052629709244,
+    "reference_peak_tip_excursion_m": 0.07296270877122879,
+    "return_residual_m": 0.003962046932429075,
+    "max_tilt_deg": 2.3543472290039062,
+    "full_support_fraction": 1.0,
+    "checkpoint": "artifacts/repro_20261119/checkpoints/calibrated/policy.pt",
+    "frame_zero_joint_max_error_rad": 0.0,
+    "frame_zero_tip_error_m": 6.039972788585146e-08
+  }
+}

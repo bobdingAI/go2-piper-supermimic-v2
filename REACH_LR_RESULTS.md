@@ -83,6 +83,36 @@
 - 左目标。[逐条指标](artifacts/reach_lr_20261119/holdout/reach_00/metrics.json) · [XYZ 图](artifacts/reach_lr_20261119/holdout/reach_00/displacement_xyz.png) · [纯初始化视频](artifacts/reach_lr_20261119/holdout/reach_00/calibrated_initial.mp4) · [更新后视频](artifacts/reach_lr_20261119/holdout/reach_00/calibrated_updated.mp4)
 - 右目标。[逐条指标](artifacts/reach_lr_20261119/holdout/reach_01/metrics.json) · [XYZ 图](artifacts/reach_lr_20261119/holdout/reach_01/displacement_xyz.png) · [纯初始化视频](artifacts/reach_lr_20261119/holdout/reach_01/calibrated_initial.mp4) · [更新后视频](artifacts/reach_lr_20261119/holdout/reach_01/calibrated_updated.mp4)
 
+## 独立复现
+
+在原生 Ubuntu 22.04.5、RTX 5090 和 580.126.09 驱动上，从提交 `1115352` 按 README 与下方命令重新运行。使用锁定的 Python 3.12.13、mjlab 1.6.0、MuJoCo / Warp 3.16.0 和 PyTorch 2.14.1+cu130。发布权重回放使用随仓库提供的校准留出参考。重训用原始 IK 和校准两套示范，均覆盖相同的 6 个目标，并使用种子 0、48 个并行环境、401 步示范初始化、100 次环境采样迭代和 24 次 SuperMimic 更新。重训后生成两条校准留出参考，逐帧数据与原实验发布的参考一致。
+
+以下各条均跑满 150 帧，四脚支撑 100%，最大倾角低于 2.5°。验收还要求方向完成率至少 70%，停留参考误差不超过 2.5 cm。
+
+| 策略 | 左完成率 | 左停留参考误差 cm | 右完成率 | 右停留参考误差 cm | 两个目标的验收结果 |
+| --- | ---: | ---: | ---: | ---: | --- |
+| 发布的校准纯初始化权重 | 79.30% | 1.344 | 82.56% | 1.462 | 通过 |
+| 原始 IK 纯初始化复训 | 87.84% | 2.775 | 86.81% | 2.860 | 停留误差超限 |
+| 原始 IK 更新后复训 | 85.24% | 2.786 | 89.58% | 2.831 | 停留误差超限 |
+| 校准纯初始化复训 | 79.58% | 1.321 | 81.99% | 1.482 | 通过 |
+| 校准更新后复训 | 75.19% | 1.594 | 79.94% | 1.559 | 通过 |
+
+发布权重的回放与原报告在表中精度下一致。重训时，校准示范让纯初始化策略的左右停留误差分别减少 1.45 和 1.38 cm。继续更新 24 次后，校准组仍达标，左右误差分别增加 0.273 和 0.077 cm。这次复现覆盖一个训练种子和两个仿真留出目标。
+
+历史短训也在同一台机器上重新执行。重新生成的 8 条示范与仓库中原示范的共有数据字段逐项一致。下表的到点误差以 IK 指定点为基准，取伸臂停留段的手爪平均距离。三种策略均跑满两条各 150 帧的轨迹，全程四脚接触地面。
+
+| 历史训练流程 | 迭代 / 更新 | 留出 1 到点误差 cm | 留出 2 到点误差 cm |
+| --- | ---: | ---: | ---: |
+| 从头短训 | 300 / 104 | 8.46 | 4.23 |
+| 仅示范初始化 | 0 / 0 | 5.98 | 4.69 |
+| 示范初始化后更新 | 150 / 44 | 5.59 | 4.66 |
+
+示范初始化前后两份结果与 README 的原始记录在厘米小数点后两位一致。从头短训的原记录为 8.64 和 4.71 cm。
+
+- 发布权重回放。[左目标指标](artifacts/repro_20261119/release_replay/reach_00/metrics.json) · [右目标指标](artifacts/repro_20261119/release_replay/reach_01/metrics.json)
+- 左目标复训。[逐条指标](artifacts/repro_20261119/left_right/holdout/reach_00/metrics.json) · [XYZ 图](artifacts/repro_20261119/left_right/holdout/reach_00/displacement_xyz.png) · [校准纯初始化视频](artifacts/repro_20261119/left_right/holdout/reach_00/calibrated_initial.mp4)
+- 右目标复训。[逐条指标](artifacts/repro_20261119/left_right/holdout/reach_01/metrics.json) · [XYZ 图](artifacts/repro_20261119/left_right/holdout/reach_01/displacement_xyz.png) · [校准纯初始化视频](artifacts/repro_20261119/left_right/holdout/reach_01/calibrated_initial.mp4)
+
 ## 复现
 
 在 Ubuntu 的仓库根目录运行，`r` 取一个新的输出根目录。原先的 `data/` 和 `artifacts/training/` 用于读原基线。公开克隆可在 [Release](https://github.com/violet446/go2-piper-supermimic-v2/releases/tag/reach-lr-20261119) 下载 `go2-piper-legacy-initial.pt` 和 `go2-piper-legacy-updated.pt`，分别放到 `artifacts/training/reach_warm_initial/policy.pt` 和 `artifacts/training/reach_warm/ckpt_latest.pt`。
